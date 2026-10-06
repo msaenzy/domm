@@ -1,0 +1,39 @@
+/* responsive.css — mobile-first: 48em tablet · 64em desktop · 90em grande. */
+
+@media (min-width: 48em) {
+  .intro { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 0; text-align: justify; hyphens: auto; }
+  .intro > * { padding-inline: var(--space-md); }
+  .intro > *:first-child { padding-left: 0; }
+  .intro > *:last-child { padding-right: 0; }
+  .intro > *:not(:first-child) { padding-top: 0; border-top: 0; border-left: var(--border-w) solid var(--color-border); }
+  .intro > .intro__box { margin-left: var(--space-md); padding: var(--space-sm) var(--space-md); border: var(--border-w) solid var(--color-border); }
+  .intro__box img { margin-left: -2.75rem; width: 6rem; }
+
+  .grid--ci3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid--ci2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--pv { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--pv .pv-c { grid-column: 1 / -1; max-width: 16rem; justify-self: center; }
+  .grid--pv2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; margin: var(--space-xl) auto 0; align-items: center; }
+  .logo-row { grid-template-columns: repeat(3, auto); justify-content: space-between; }
+  .grid--ci3 .piece, .grid--ci3 > img { align-self: start; }
+}
+
+@media (min-width: 64em) {
+  .site-header { flex-wrap: nowrap; }
+  .site-header nav { flex-basis: auto; }
+  .site-header__toggle { display: none; }
+  .js .site-header__menu, .site-header__menu { display: flex; flex-direction: row; flex-wrap: nowrap; gap: 0 var(--space-md); padding: 0; }
+  .site-header__menu a { min-height: 2.75rem; }
+
+  .grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-xl); }
+  .grid--pv { grid-template-columns: 2fr 2fr 1fr; gap: var(--space-lg); }
+  .grid--pv .pv-c { grid-column: auto; max-width: none; }
+  .grid--pv2 { grid-template-columns: 1.4fr 1fr; }
+  .grid--gc { grid-template-columns: 1fr 1.1fr; column-gap: var(--space-xl); }
+  .grid--oe .oe-gen { max-width: 80%; }
+  .photo-sm { width: 40%; justify-self: start; margin-left: 12%; }
+}
+
+@media (min-width: 90em) {
+  :root { --header-h: 4.5rem; }
+}

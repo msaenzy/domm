@@ -1,0 +1,66 @@
+/* variables.css — tokens derivados del PDF (1920 pt de ancho → 1440 px de diseño).
+   Tipografías reales del PDF: Sora (Light/Regular) y Poppins (Regular/SemiBold) — ambas en Google Fonts. */
+:root {
+  /* color */
+  --color-bg: #ffffff;
+  --color-text: #282347;          /* tinta del PDF (#282347 / #292349) */
+  --color-primary: #e92e21;       /* llama del logotipo DOMM */
+  --color-secondary: #00a719;     /* verde de las barras de sección */
+  --color-accent: #00a719;
+  --color-border: #292349;        /* filetes verticales de las introducciones */
+  --color-muted: #5b5873;
+  --color-hero-red: #ff0000;      /* relleno vectorial del hero (referencia; el hero va como SVG) */
+  --color-white: #ffffff;
+  /* color por sección (barras de título del PDF) */
+  --sec-pv: #00a719;
+  --sec-gc: #789d00;
+  --sec-ci: #00ad19;
+  --sec-ea: #026e32;
+  --sec-oe: #1f396b;
+  --sec-im: #009d38;
+
+  /* type */
+  --font-display: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* etiquetas de paleta (Poppins) */
+  --text-xs: 0.75rem;                                    /* etiquetas de color: 8.9 px @1440, mínimo legible */
+  --text-sm: clamp(0.875rem, 0.82rem + 0.15vw, 1rem);    /* etiquetas verdes: 16 px @1440 */
+  --text-md: clamp(0.95rem, 0.86rem + 0.3vw, 1.125rem);  /* texto corrido: 19 px @1440 */
+  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 0.95rem + 1.75vw, 2.6rem);    /* títulos de sección: 37.5 px @1440 */
+  --text-display: clamp(2.5rem, 6vw, 5rem);
+  --leading-tight: 1.15;
+  --leading-body: 1.45;
+  --tracking-display: 0;
+  --tracking-label: 0.01em;
+
+  /* space */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --space-lg: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+  --space-xl: clamp(3rem, 2rem + 4vw, 6rem);
+  --space-2xl: clamp(4rem, 3rem + 6vw, 9rem);
+  --section-y: clamp(4rem, 2rem + 9vw, 10rem);
+
+  /* shape — el PDF es plano: sin sombras */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --border-w: 1px;
+
+  /* layout */
+  --container: 90rem;
+  --gutter: clamp(1rem, 5.5vw, 5rem);   /* margen izquierdo del PDF ≈ 5.5–7.4 % */
+  --grid-columns: 12;
+  --header-h: 4rem;
+
+  /* motion — sobrio: fade-up corto */
+  --dur-reveal: 0.8s;
+  --dur-nav: 0.35s;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --reveal-distance: 20px;
+}
